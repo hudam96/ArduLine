@@ -21,6 +21,13 @@ class CreateAdminsTable extends Migration
             $table->string('remember_token')->nullable();
             $table->timestamps();
         });
+        $admin = [
+            'name'=>'huda m. najm',
+            'username'=>'hudam96',
+            'password'=>'123123'
+
+        ];
+        \App\Admin::create($admin);
     }
 
     /**
