@@ -3,11 +3,11 @@
 
 
 
-    welcome to ArduLine
+     ArduLine
 @endsection
 @section('content')
-    <div class="container-fluid con1">
-        <div class="row justify-content-center ">
+    <div class="container-fluid con1 ">
+        <div class="row justify-content-center  ">
             <div class="col-11 col-brand">
                 <div id="circle">
 
@@ -66,24 +66,27 @@
     </div>
 
     <div class="container-fluid mt-5 bg-white">
-        <div class="row justify-content-center">
-
-            <div class="col-6 col-lg-4   col-auto" text-align="center">
-                <img src="{{asset('images/cart.svg')}}" height="400px" width="400px">
+        <div class="row a justify-content-between ml-5 mr-5">
+            <div class="col-12 col-lg-3   col-auto mb-5 mt-5" align="center">
+                <img src="{{asset('images/online.svg')}}" height="300px" width="300px">
+                <h3 class="awesome"> Make Your plan </h3>
             </div>
-            <div class="col-6 col-lg-6  pr-5 center ">
-
-
-                    <h5 class="awesome">ArduLine is a startup that started in the garage of d3stodio company,
-                        and will help you to start  up your electronical project</h5>
-
-
-
-                </div>
-
+            <div class="col-12 col-lg-3    col-auto mt-5" align="center">
+                <img src="{{asset('images/cart.svg')}}" height="300px" width="300px">
+                <h3 class="awesome"> Buy From ArduLine</h3>
+            </div>
+            <div class="col-12 col-lg-3  col-auto mt-5" align="center">
+                <img src="{{asset('images/process.svg')}}" height="300px" width="300px">
+                <h3 class="awesome"> Start up Your Project </h3>
             </div>
         </div>
 
+        </div>
+
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
 
@@ -98,10 +101,7 @@
         </div>
     </div>
 
-    <div class="container-fluid footer">
 
- <h5 class="pt-2">all the copyrights are reserved to ArduLine <i class="far fa-copyright"></i></h5>
-    </div>
 
 
 
@@ -123,6 +123,20 @@
     map:map
     })
     }
+
+
+    $(window).scroll(function() {
+
+    if ($(this).scrollTop()>0)
+    {
+    $('.a').fadeIn();
+    }
+    else
+    {
+    $('.a').fadeOut();
+    }
+    });
+
 
 @endsection
 @section('map')

@@ -4,7 +4,13 @@
 Arduline-{{$section->name}}
     @endsection
 @section('content')
-
+@section('body')
+    <style>
+        body{
+            background-color: #F2F3F7 !important;
+        }
+    </style>
+@endsection
 
     <div class="container-fluid store-con">
         <div class="row">
@@ -26,33 +32,29 @@ Arduline-{{$section->name}}
 
             <div class="row">
                 @foreach($products as $product)
-                    <div class="col-5 mt-5">
-                        <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-                            <div class="mainflip">
-                                <div class="frontside">
-                                    <div class="card" style="width:20rem;">
-                                        <img class="card-img-top img- fluid" src="{{url('images',$product->image)}}" alt="card image">
-                                        <div class="card-body">
-                                            <h4 class="card-title">{{$product->name}}</h4>
+                    <div class="col-12 col-lg-3 mt-5">
+                        <a  class="c-pointer" >
+                            <div class="card card-shadow">
+                                <div class="overflow-hidden">
+                                    <img class="card-img-top max-height zoom" src="{{url('images',$product->image)}}" alt="card image">
 
-                                        </div>
-                                    </div>
                                 </div>
-                                <div class="backside">
-                                    <div class="card" style="width:20rem;">
-                                        <div class="card-body">
-                                            <h4 class="card-title">{{$product->name}}</h4>
-                                            <p class="card-text">{{$product->price}}$</p>
-                                            @if (auth()->check())
-                                                <a class="btn btn-style " href="/cart/{{$product->id}}" role="button"><i class="fas fa-cart-arrow-down"></i></a>
-                                            @endif
-                                        </div>
 
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-12"><h4 class="card-title">{{$product->name}}</h4></div>
+                                        <div class="col-12"> <p class="card-text price-style">{{$product->price}}$<span class="ml-2"><strike>@if($product->discount){{$product->discount}}$ @endif</strike></span> </p>
+                                            <div class="col-12"> @if (auth()->check())
+                                                    <a class="btn btn-style " href="/cart/{{$product->id}}" role="button"><i class="fas fa-cart-arrow-down"></i></a>
+                                                @else
+                                                    <a class="btn btn-style " data-toggle="tooltip" data-placement="bottom" title="you have to login first " role="button"><i class="fas fa-cart-arrow-down"></i></a>
+                                                @endif</div>
+                                        </div>
                                     </div>
+
                                 </div>
                             </div>
-                        </div>
-
+                        </a>
                     </div>
                 @endforeach
             </div>
@@ -62,10 +64,7 @@ Arduline-{{$section->name}}
 
         </div>
     </div>
-    <div class="container-fluid footer">
 
-        <h5 class="pt-2">all the copyrights are reserved to ArduLine <i class="far fa-copyright"></i></h5>
-    </div>
 @endsection
 @section('script')
 

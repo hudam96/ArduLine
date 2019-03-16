@@ -32,10 +32,7 @@
 
 </div>
 
-<div class="container-fluid footer">
 
-    <h5 class="pt-2">all the copyrights are reserved to ArduLine <i class="far fa-copyright"></i></h5>
-</div>
 @endsection
 
 @section('script')

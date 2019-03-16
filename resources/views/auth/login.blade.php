@@ -1,5 +1,11 @@
 @extends('layouts.app')
-
+@section('body')
+    <style>
+        body{
+            background: radial-gradient(circle, rgba(201,174,238,1) 70%, rgba(148,187,233,1) 100%)!important;
+        }
+    </style>
+    @endsection
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
