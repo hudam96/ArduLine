@@ -172,7 +172,7 @@ body {padding-top:5em;
     -webkit-border-radius: 50%;
     -webkit-animation-duration: 12s;
     -webkit-animation-iteration-count: infinite;
-    -webkit-animation-direction: linear;
+    
     opacity: 0.5;
 }
 
