@@ -30,7 +30,7 @@ Arduline-{{$section->name}}
 
         <div class="col-12 col-lg-9">
 
-            <div class="row">
+            <div class="row ">
                 @foreach($products as $product)
                     <div class="col-12 col-lg-3 mt-5">
                         <a  class="c-pointer" >
@@ -41,19 +41,25 @@ Arduline-{{$section->name}}
                                 </div>
 
                                 <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-12"><h4 class="card-title">{{$product->name}}</h4></div>
-                                        <div class="col-12"> <p class="card-text price-style">{{$product->price}}$<span class="ml-2"><strike>@if($product->discount){{$product->discount}}$ @endif</strike></span> </p>
-                                            <div class="col-12"> @if (auth()->check())
-                                                    <a class="btn btn-style " href="/cart/{{$product->id}}" role="button"><i class="fas fa-cart-arrow-down"></i></a>
-                                                @else
-                                                    <a class="btn btn-style " data-toggle="tooltip" data-placement="bottom" title="you have to login first " role="button"><i class="fas fa-cart-arrow-down"></i></a>
-                                                @endif</div>
-                                        </div>
-                                    </div>
 
+
+
+                                    <div class="row justify-content-between">
+                                        <div class="col-12"><h4 class="card-title">{{$product->name}}</h4></div>
+                                        <div class="col-12"><p class="card-text price-style">{{$product->price}}$<span class="ml-2"><strike>@if($product->discount){{$product->discount}}$ @endif</strike></span> </p></div>
+
+
+                                    </div>
+                                    <div class="row mt-3 justify-content-center">
+                                        <div class="col col-auto"> @if (auth()->check())
+                                                <a class="btn btn-style " href="/cart/{{$product->id}}" role="button"><i class="fas fa-cart-arrow-down"></i></a>
+                                            @else
+                                                <a class="btn btn-style " data-toggle="tooltip" data-placement="bottom" title="you have to login first " role="button"> Add to Cart<i class="fas fa-cart-arrow-down"></i></a>
+                                            @endif</div></div>
                                 </div>
                             </div>
+
+
                         </a>
                     </div>
                 @endforeach

@@ -3,9 +3,6 @@
         <a class="nav-link active" href="/admin/dashboard">home</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link active" href="/admin/dashboard/user">users</a>
-    </li>
-    <li class="nav-item">
         <a class="nav-link active" href="/admin/dashboard/section">sections</a>
     </li>
     <li class="nav-item">

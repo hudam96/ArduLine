@@ -65,33 +65,29 @@
         </div>
     </div>
 
-    <div class="container-fluid mt-5 bg-white">
-        <div class="row a justify-content-between ml-5 mr-5">
+    <div class="container-fluid mt-5 bg-white mb-5">
+        <div class="row  justify-content-between ml-5 mr-5">
             <div class="col-12 col-lg-3   col-auto mb-5 mt-5" align="center">
                 <img src="{{asset('images/online.svg')}}" height="300px" width="300px">
-                <h3 class="awesome"> Make Your plan </h3>
+                <h3 class="awesome a"> Make Your plan </h3>
             </div>
             <div class="col-12 col-lg-3    col-auto mt-5" align="center">
                 <img src="{{asset('images/cart.svg')}}" height="300px" width="300px">
-                <h3 class="awesome"> Buy From ArduLine</h3>
+                <h3 class="awesome a"> Buy From ArduLine</h3>
             </div>
             <div class="col-12 col-lg-3  col-auto mt-5" align="center">
                 <img src="{{asset('images/process.svg')}}" height="300px" width="300px">
-                <h3 class="awesome"> Start up Your Project </h3>
+                <h3 class="awesome a"> Start up Your Project </h3>
             </div>
         </div>
 
         </div>
 
 
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
 
-
-    <div class="container-fluid con2">
+    <div class="container-fluid con2 mt-5">
         <div class="row justify-content-end">
             <div class="col">
             <div id="map">

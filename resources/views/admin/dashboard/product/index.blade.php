@@ -35,7 +35,7 @@
                                 <td>{{$product->price}} </td>
                                 <td>{{$product->discount}} </td>
                                 <td>
-                                    <div class="card">
+                                    <div class="card card-width">
                                     <image width="100px" heigh="100px" src="{{url('images',$product->image)}}"></image>
                                     </div>
 

@@ -172,7 +172,7 @@ body {padding-top:5em;
     -webkit-border-radius: 50%;
     -webkit-animation-duration: 12s;
     -webkit-animation-iteration-count: infinite;
-    
+
     opacity: 0.5;
 }
 
@@ -406,7 +406,7 @@ div#three{
 .btn-style {
   color: #fff!important;
     background:  rgba(201,174,238,1);
-    border-radius: 50%!important;
+
 }
 
 .up {
@@ -459,20 +459,20 @@ div#three{
 }
 .card-shadow:hover{
     box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.3), 0 10px 20px 0 rgba(0, 0, 0, 0.2) !important;
-    background-color: white!important;
-    color: black!important;
+    background-color: #5A5773!important;
+    color: #fff!important;
 
 }
 .card-shadow{
  border-radius: 8px !important;
-    background-color: dimgray!important;
-    color: #fefefe !important;
+    background-color: #fff!important;
+    color: #5A5773 !important;
     border: none !important;
 
 }
 .price-style{
     font-size: 15px !important;
-    color: #e3342f !important;
+
 }
 .price-style span {
     color: darkgray;
