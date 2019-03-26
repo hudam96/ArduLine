@@ -72,6 +72,7 @@ class HomeController extends Controller
         $request->session()->save();
         return redirect()->back();
 
+
     }
     public function showCart(){
         if(!Session::has('card')){
@@ -79,12 +80,14 @@ class HomeController extends Controller
         }
         $oldcard = Session::get('card');
         $card = new Card($oldcard);
-        return view('front.cart'  , ['products'=>$card->items, 'totalprice'=>$card->totalprice , 'totalQty'=>$card->totalQty]);
+        return view('front.cart'  , ['products'=>$card->items, 'totalprice'=>$card->totalprice , 'totalQty'=>$card->totalQty ]);
 
     }
+
 public function checkout(){
-   Session::forget('card');
-   return view('front.cart');
+        $checkout=Session::get('card');
+       Session::forget('card');
+     return view('front.checkout',['products'=>$checkout->items,'totalprice'=>$checkout->totalprice]);
 }
 
 }

@@ -70,7 +70,7 @@
                                     </div>
                                 <div class="row mt-3 justify-content-center">
                                 <div class="col col-auto"> @if (auth()->check())
-                                        <a class="btn btn-style " href="/cart/{{$product->id}}" role="button"><i class="fas fa-cart-arrow-down"></i></a>
+                                        <a class="btn btn-style " href="/cart/{{$product->id}}" role="button">Add to Cart<i class="fas fa-cart-arrow-down"></i></a>
                                     @else
                                         <a class="btn btn-style " data-toggle="tooltip" data-placement="bottom" title="you have to login first " role="button"> Add to Cart<i class="fas fa-cart-arrow-down"></i></a>
                                     @endif</div></div>

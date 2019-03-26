@@ -11,6 +11,7 @@ class Card
     public $totalQty = 0;
     public $number = 0;
 
+
     public function __construct($oldcard)
     {
         if ($oldcard) {
@@ -22,13 +23,14 @@ class Card
 
     public function add($item, $id)
     {
-        $stor =['pricetotal' => 0, 'price' => $item->price,'id'=>$item->id, 'item' => $item];
+        $stor =['pricetotal'=> 0, 'price' => $item->price,'id'=>$item->id,'image'=>$item->image, 'item' => $item];
         if ($this->items) {
             if (array_key_exists($id, $this->items)) {
                 $stor = $this->items[$id];
             }
         }
-
+        $stor['pricetotal']++;
+        $stor['price']= $stor['price']* $stor['pricetotal'];
         $this->items[$id] = $stor;
         $this->totalQty = $this->totalQty +1 ;
         $this->totalprice += $item->price;
